@@ -47,7 +47,7 @@ public class MySQLDBHelper {
         String database_user=null;  
         String database_password=null;  
         try {  
-            InputStream fis=this.getClass().getResourceAsStream("/db.properties");  
+            InputStream fis=getClass().getClassLoader().getResourceAsStream("/db.properties");  
             Properties p=new Properties();  
             p.load(fis);  
             driver_class=p.getProperty("driver").trim();
